@@ -35,7 +35,7 @@ void myfunc(){
 }
 int main()
 {
-   int membersID[3]={213947013,21394701,2139470};//members id
+   int membersID[3]={213947,21394701,2139470};//members id
    
    
     int userID;
