@@ -12,115 +12,44 @@ using namespace std;
 
 int main()
 {
-    int IDarray[2]={12345,54321};
-    int id;
-    int balance,depositAmount,transferenceAmount;
-    string answer;
-    string userinput_addTakeBalance;
-    int trnswhom;
     
+    int aprilAP[30]={1,2,3,4,5,6,7,8,9,1011,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30};
+    int aprilhours[7]={8,9,10,11,12,15,16};
+   string usedinput;
+    cout<<"would you like to book an appointment?\n";
+    cin>>usedinput;
     
- 
-    cout<<"please enter your id\n";
-    cin>>id;
-      if(id==12345){
-          cout<<"hello Yahav gueta,\n";
-          cout<<"would you like to make a deposit/a transference \n or to check your account balance?\n(enter balance/transfer/deposit)\n\n";
-          cin>>userinput_addTakeBalance;
-          if(userinput_addTakeBalance=="deposit"){
-           
-             cout<<"please enter the amount you would like to deposit\n";
-              cin>>depositAmount;
-              balance=+depositAmount;
-              cout<<"deposit made succsesfully the balance is \t"<<balance<<"\n"; 
-          }
-          if(userinput_addTakeBalance=="transfer"){
-               cout<<"please enter the acoount number you would like to transfer to\n";
-              cin>>trnswhom;
-              cout<<"please enter the amount you would like to transfer\n";
-              cin>>transferenceAmount;
-              balance-=transferenceAmount;
-              cout<<" transference succsesfully made, the balance is \t"<<balance<<"\n";
-              
-          }
-          if(userinput_addTakeBalance=="balance"){
-              cout<<"currently your balance is \t "<<balance<<"\n\n\n";
-              cout<<"would you like to make a transfer or a deposit?\n";
-              cin>>answer;
-              if(answer=="yes"){
-           cout<<"enter transfer/deposit\n\n";
-          cin>>userinput_addTakeBalance;
-          if(userinput_addTakeBalance=="deposit"){
-           
-             cout<<"please enter the amount you would like to deposit\n";
-              cin>>depositAmount;
-              balance=+depositAmount;
-              cout<<"deposit made succsesfully the balance is \t"<<balance<<"\n"; 
-          }
-          if(userinput_addTakeBalance=="transfer"){
-               cout<<"please enter the acoount number you would like to transfer to\n";
-              cin>>trnswhom;
-              cout<<"please enter the amount you would like to transfer\n";
-              cin>>transferenceAmount;
-              balance-=transferenceAmount;
-              cout<<" transference succsesfully made, the balance is \t"<<balance<<"\n";
-              
-          }
-          }
-              }
-              
-          }
-          
-          
-          //משתמש שני
-          if(id==54321){
-          cout<<"hello Yaha guet,\n";
-          cout<<"would you like to make a deposit/a transference \n or to check your account balance?\n(enter balance/transfer/deposit)\n\n";
-          cin>>userinput_addTakeBalance;
-          if(userinput_addTakeBalance=="deposit"){
-           
-             cout<<"please enter the amount you would like to deposit\n";
-              cin>>depositAmount;
-              balance=+depositAmount;
-              cout<<"deposit made succsesfully the balance is \t"<<balance<<"\n"; 
-          }
-          if(userinput_addTakeBalance=="transfer"){
-               cout<<"please enter the acoount number you would like to transfer to\n";
-              cin>>trnswhom;
-              cout<<"please enter the amount you would like to transfer\n";
-              cin>>transferenceAmount;
-              balance-=transferenceAmount;
-              cout<<" transference succsesfully made, the balance is \t"<<balance<<"\n";
-              
-          }
-          if(userinput_addTakeBalance=="balance"){
-              cout<<"currently your balance is \t "<<balance<<"\n\n\n";
-              cout<<"would you like to make a transfer or a deposit?\n";
-              cin>>answer;
-              if(answer=="yes"){
-           cout<<"enter transfer/deposit\n\n";
-          cin>>userinput_addTakeBalance;
-          if(userinput_addTakeBalance=="deposit"){
-           
-             cout<<"please enter the amount you would like to deposit\n";
-              cin>>depositAmount;
-              balance=+depositAmount;
-              cout<<"deposit made succsesfully the balance is \t"<<balance<<"\n"; 
-          }
-          if(userinput_addTakeBalance=="transfer"){
-               cout<<"please enter the acoount number you would like to transfer to\n";
-              cin>>trnswhom;
-              cout<<"please enter the amount you would like to transfer\n";
-              cin>>transferenceAmount;
-              balance-=transferenceAmount;
-              cout<<" transference succsesfully made, the balance is \t"<<balance<<"\n";
-              
-          }
-          }
-              }
-              
-          }
-             
-      }
+    if(usedinput=="yes" || usedinput=="Yes"){
+        cout<<"great!, here's a list of the available dates:\n";
+        cout<<"\n --------------------------------------------------------\n";
+        for (int i = 0; i <=30; i++) {
+  cout << aprilAP[i] << "\t";
+}
+cout<<"\n --------------------------------------------------------\n";
+int aprildayAPP;
+cout<<"please enter the day that is suitable for you:\n";
+cin>>aprildayAPP;
+
+int aprilhourAPP;
+cout<<"this is the hours available at the selected date\n";
+cout<<"\n --------------------------------------------------------\n";
+for (int i = 0; i <=7; i++) {
+  cout << aprilhours[i] << "\t";
+}
+cout<<"\n --------------------------------------------------------\n";
+cout<<"please enter the desirable time:\n";
+cin>>aprilhourAPP;
+  /*----------------*/
+  if (aprildayAPP==1 && aprilhourAPP==15){
+      cout<<"this date is currently unavailable please choose another\n";
+  }else {
+      cout<<"-----------------------------------------------\n";
+      cout<<"you booked an appointment for\t"<<aprildayAPP<<" of april at\t"<<aprilhourAPP<<"\n";
+     
+  }
+}
+
     
+      
+}
 
