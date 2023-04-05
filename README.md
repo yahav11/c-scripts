@@ -1,1 +1,2 @@
-# c-scripts
+# cpp-scripts
+collection of projects in cpp
